@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family:'Raleway', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    
+}
+/* navbar */
+nav {
+    
+    display: flex;
+    align-items: center;
+    justify-content:flex-end ;
+    flex-wrap: wrap;
+}
+
+nav a {
+    padding: 16px;
+    display: table-cell ;
+}
+nav a:hover {
+    border-top: 3px solid #0065fc;
+}
+#logo {
+    margin-right: auto;
+    padding: 0 32px;
+}
+
+.ac{
+    color: #0065fc;
+}
+
+
+
+@media(max-width:800px) {
+
+    .navigation{
+        
+        order: 1;
+        flex-basis: 100%;
+
+    }
+.navigation a {
+
+    flex-basis: 50%;
+    text-align: center;
+    border-bottom: 3px solid lightgray;
+}
+.navigation a:hover{
+border-bottom: 3px solid #0065fc;
+border-top: 0px;
+
+
+}
+
+
+}
+
+/* body */
+
+.wrapper {
+    padding: 0 40px;
+}
+
+/* searchform */
+.searchform{
+    display: flex;
+}
+
+.searchform i{
+    padding: 16px 16px;
+    background-color: #f2f2f2;
+    border-radius: 16px 0 0 16px;
+
+}
+.searchform input ::placeholder{
+    font-weight: bold;
+    
+
+}
+.searchform button {
+    background-color: #0065fc;
+    color: white;
+    border-radius: 0 16px 16px 0 ;
+    padding: 16px 24px;
+    border:none ;
+    cursor: pointer;
+    opacity:0.9;
+}
+ .searchform button:hover {
+    opacity: 1;
+    transform: scale(1.03);
+ }
+
+ /* filter */
+ .filter-list {
+    display: flex;
+    align-items: center;
+    gap: 16px 32px;
+    flex-wrap: wrap;
+    
+ }
+ 
+ 
+ .fas{
+    color: #0065fc;
+    background-color:#deebff;
+    padding: 16px;
+    border-radius: 50%;
+    margin: -2px;
+    opacity: 0.9;
+ }
+ 
+
+.filter{
+    border: 2px solid lightgray;
+    border-radius: 32px;
+}
+
+ .filter span{
+    font-weight: bold;
+    padding: 16px;
+    opacity: 0.9;
+}
+
+.filter:hover{
+   background-color: whitesmoke ; 
+   opacity: 1;
+   transform: scale(1.03);
+}
+ /* infos */
+ 
+ .infos{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+ }
+
+ .infos .fas{
+    color: #0065fc;
+    border-radius: 50%;
+    background-color: aliceblue;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #0065fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+
+/* accommodation-list */
+
+.accommodation-list {
+    display: flex;
+    gap: 16px;
+    
+    
+
+}
+.accommodation-list .city{
+    background-color:#f2f2f2;
+    border-radius: 16px ;
+    padding: 16px;
+    flex-basis: 66%;
+    height: 640px;
+}
+
+
+
+
+
+.accommodation-list .popular{
+    flex-basis: 33%;
+    border: 1px solid white;
+    background-color: #f2f2f2;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+/* MEDIA */
+@media only screen and  (max-width:992px){
+    .accommodation-list{
+        flex-direction: column;
+    }
+    .popular{
+        order: -1;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .accommodation-list{
+        flex-direction: column;
+    }
+    .popular{
+        order: -1;
+    }
+}
+
+
+@media only screen and (max-width:768px){
+    .accommodation-list{
+        flex-direction: column;
+    }
+    .popular{
+        order: -1;
+    }
+}
+/* appartments */
+
+.appartments{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;;
+    margin-bottom: 16px;
+    flex-basis: 33%;
+    
+}
+.appartments :hover{
+    background-color: whitesmoke ; 
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/* popular */
+
+.accommodation-list .popular{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 640px;
+}
+.accommodation-list .popular :hover{
+    background-color:whitesmoke ; 
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+
+/* card */
+
+.card{
+    background-color: white;
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 0 0 16px #0000002e;
+    width: 280px;
+}
+.card img{
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 144px;
+    width: 100%;
+    object-fit: cover;
+    object-position:center;
+}
+
+.stars{
+    color:#0065fc;
+}
+.stars .grey{
+    color: lightgray;
+}
+.card p,
+.card h3{
+    margin:4.8px;
+}
+
+
+/* Most Popular */
+
+.popular-card{
+    background-color: white;
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 0 0 16px #0000002e;
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+
+}
+
+
+.popular-card img{
+    border-radius: 16px 16px 0 0;
+    height: 144px;
+    width: 40%;
+    object-fit: cover;
+    object-position:center;
+    display: flex;
+    flex-direction: row;
+}
+
+.detail{
+    position: relative;
+    line-height: 1.2;
+    gap: 4px;
+    width: 60%;
+}
+
+/* Activities in Marseille */
+  
+  
+#Activities-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex: 1;
+    gap: 30px;
+}
+
+#Activities-section :hover{
+    background-color: whitesmoke;
+    opacity: 1;
+    transform: scale(1.03);
+}
+.Activities-double-item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Activities-double-item li {
+    height: 50%;
+    border-radius: 15px;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%);
+
+}
+
+#Activities-section ul {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.Activities-list li {
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%);
+    flex-direction: column;
+    flex: 1;
+}
+
+.Activities-list img {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 109px;
+    min-height: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 2px 1px #ddd;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.Activities-double-item img {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 109px;
+    max-height: 112px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.Activities-double-item item1 {
+    height: 66.66% ;
+}
+
+.Activities-double-item item1 img {
+    max-height: 154px;
+}
+
+.Activities-double-item item2 {
+    height: 33.33% ;
+}
+
+.Activities-double-item item2 img {
+    max-height: 71px;
+}
+
+#Activities-header {
+    margin-top: 45px;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width:992px){
+    #Activities-section{
+        flex-direction: column;
+    }
+    
+   
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    #Activities-section{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:768px){
+    #Activities-section{
+        flex-direction: column;
+    }
+    
+       
+}
+
+/* footer */
+
+.footer {
+    display: flex;
+    background-color: lightgray;
+    gap: 30%;
+    line-height: 30px;
+    margin-top: 30px;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width:992px){
+    .footer{
+        flex-direction: column;
+    } 
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .footer{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
